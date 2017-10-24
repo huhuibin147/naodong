@@ -1,0 +1,275 @@
+.body{
+
+}
+.row{
+    margin: 0;
+}
+.home-top{
+    margin-top: 10px;
+}
+.fm-8{
+    background-color: #9d9d9d;
+    height: 125px;
+}
+.fm-2{
+    height: 125px;
+}
+.edit-8{
+    height: 90px;
+    background-color: rgba(248, 26, 237, 0.03);
+    box-shadow: 0 0 0.5px  #9d9d9d;
+    -moz-box-shadow: 0 0 0.5px  #9d9d9d;
+    -webkit-box-shadow: 0 0 0.5px  #9d9d9d;
+}
+.edit-2{
+    height: 90px;
+}
+.tou{
+    width: 140px;
+    height: 140px;
+    margin-left: 20px;
+    margin-top: -70px;
+    border-radius: 5px; /* 所有角都使用半径为5px的圆角，此属性为CSS3标准属性 */
+    -moz-border-radius: 5px; /* Mozilla浏览器的私有属性 */
+    -webkit-border-radius: 5px; /* Webkit浏览器的私有属性 */
+}
+.name{
+    margin-top: -55px;
+    margin-left: 180px;
+    font-size: 28px;
+}
+.set{
+    margin-top: -15px;
+    float: right;
+    margin-right: 10px;
+    width: 120px;
+    height: 35px;
+    border: 1px solid #2aabd2;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 5px; /* 所有角都使用半径为5px的圆角，此属性为CSS3标准属性 */
+    -moz-border-radius: 5px; /* Mozilla浏览器的私有属性 */
+    -webkit-border-radius: 5px; /* Webkit浏览器的私有属性 */
+}
+.set a{
+    color: #2aabd2;
+}
+.mid-6{
+    position: relative;
+    margin-top: 20px;
+    height: auto;
+    box-shadow: 0 0 0.5px  #9d9d9d;
+    -moz-box-shadow: 0 0 0.5px  #9d9d9d;
+    -webkit-box-shadow: 0 0 0.5px  #9d9d9d;
+    font-family: 微软雅黑;
+}
+.HomeEntry-list{
+    margin-left: -20px;
+}
+.HomeEntry-list li{
+	width:80px;
+    float: left;
+    display: block;
+}
+.HomeEntry-list li a{
+    font-size: 18px;
+    color: #3c3c3c;
+
+}
+.myNavBar{
+	background-image: -webkit-linear-gradient(0deg, rgb(129,194,284) 0%, rgb(129,146,214) 60%);
+}
+.tabTitle{
+	width:100px;
+	height: 30px;
+}
+.tabTitleText{
+	font-size: 18px;
+	text-align: center;
+}
+.tabNav{
+	height: 47px;
+}
+.tabContent{
+	margin-top: 10px;
+}
+.contentTop{
+	font-size: 16px;
+    color: #666;
+    font-weight: 700;
+	margin-bottom:5px;
+}
+.guanzhu{
+    font-size: 14px;
+    color: rgba(102, 102, 102, 0.71);
+}
+.content{
+	margin-top: -8px;
+}
+#dtPanel{
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+#questionPanel{
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+#answerPanel{
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+#sharePanel{
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+#articlePanel{
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.time{
+    font-size: 14px;
+    text-align: right;
+    color: rgba(102, 102, 102, 0.71);
+}
+.z-tou{
+    margin-top: 10px;
+}
+.z-t{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px; /* 所有角都使用半径为5px的圆角，此属性为CSS3标准属性 */
+    -moz-border-radius: 5px; /* Mozilla浏览器的私有属性 */
+    -webkit-border-radius: 5px; /* Webkit浏览器的私有属性 */
+}
+.z-title{
+    margin-top: -20px;
+    margin-bottom: 5px;
+    margin-left: -10px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #259;
+}
+.z-c{
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.ce-list{
+    margin-top: 20px;
+    height: 80px;
+    margin-left: 10px;
+    box-shadow: 0 0 0.5px  #9d9d9d;
+    -moz-box-shadow: 0 0 0.5px  #9d9d9d;
+    -webkit-box-shadow: 0 0 0.5px  #9d9d9d;
+    font-family: 微软雅黑;
+}
+.list-entry{
+    margin-left: -25px;
+    text-align: center;
+}
+.list-entry li{
+    margin-top: 10px;
+    float: left;
+    width: 40%;
+    display: block;
+}
+.list-entry li a{
+    font-size: 15px;
+    color: rgba(102, 102, 102, 0.71);
+}
+.list-gz{
+    font-size: 14px;
+}
+.l-z1{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.l-z2{
+    margin-bottom: 10px;
+    text-align: center;
+    color: rgba(102, 102, 102, 0.71);
+}
+.times{
+    text-align: center;
+    color: rgba(102, 102, 102, 0.71);
+}
+.ques{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.q-title a{
+    font-size: 20px;
+    color: black;
+}
+.q-bottom{
+    margin-top: 5px;
+    color: #9d9d9d;
+}
+.answ{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.a-title a{
+    font-size: 20px;
+    color: black;
+}
+.a-user{
+    margin-top: 10px;
+}
+.a-img{
+    float: left;
+    width: 38px;
+    height: 38px;
+    border-radius: 5px; /* 所有角都使用半径为5px的圆角，此属性为CSS3标准属性 */
+    -moz-border-radius: 5px; /* Mozilla浏览器的私有属性 */
+    -webkit-border-radius: 5px; /* Webkit浏览器的私有属性 */
+}
+.a-name{
+    float: left;
+    margin-left: 10px;
+}
+.a-intro{
+    float: left;
+    margin-left: 10px;
+    color: #9d9d9d;
+}
+.a-ans{
+    margin-top: 10px;
+}
+.a-time{
+    color: #9d9d9d;
+    margin-top: 5px;
+    font-size: 12px;
+}
+.f-user{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.f-img{
+    float: left;
+    width: 55px;
+    height: 55px;
+    border-radius: 5px; /* 所有角都使用半径为5px的圆角，此属性为CSS3标准属性 */
+    -moz-border-radius: 5px; /* Mozilla浏览器的私有属性 */
+    -webkit-border-radius: 5px; /* Webkit浏览器的私有属性 */
+}
+.f-name{
+    margin-left: 20px;
+    float: left;
+}
+.f-name a{
+    font-size: 20px;
+    color: black;
+}
+.f-bottom{
+    margin-left: 20px;
+    font-size: 12px;
+    float: left;
+}
+.f-btn{
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+}

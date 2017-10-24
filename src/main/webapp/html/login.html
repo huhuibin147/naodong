@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@脑洞</title>
+
+    <link rel="stylesheet" href="../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../resources/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../resources/css/login.css">
+
+
+</head>
+<body>
+<script src="../resources/js/jquery-3.1.0.js"></script>
+<script src="../resources/js/bootstrap.js"></script>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 title">
+        <h1>脑洞</h1>
+        <h2>与世界分享你的知识</h2>
+
+
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active">
+                <a href="#login" data-toggle="tab">登录</a>
+            </li>
+            <li>
+                <a href="#zhuce" data-toggle="tab">注册</a>
+            </li>
+        </ul>
+        <div id="myTabContent1" class="tab-content">
+            <div class="tab-pane fade in active" id="login">
+                <form class="form-horizontal" role="form" onsubmit="return false" id="login-form">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label" >邮箱</label>
+                        <div class="col-sm-10">
+                            <input v-model="email" type="email"class="form-control" placeholder="注册时验证的邮箱">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label" >密码</label>
+                        <div class="col-sm-10">
+                            <input v-model="psw" type="password" class="form-control" placeholder="密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> 记住登录状态
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button class="btn btn-default  l-button" onclick="login()">登录</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="tab-pane fade" id="zhuce">
+                <form class="form-horizontal" role="form" id="regist-form">
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">昵称</label>
+                        <div class="col-sm-10">
+                            <input v-model="rname" type="text" class="form-control" id="inputName" placeholder="昵称">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
+                        <div class="col-sm-10">
+                            <input v-model="remail" type="email" class="form-control" 
+                            	onblur="checkEmail()"
+                            id="inputEmail" placeholder="注册时填写的邮箱">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                            <input v-model="rpassword" type="password" class="form-control" id="inputPassword" placeholder="密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputIdentifyCode3" class="col-sm-2 control-label">验证码</label>
+                        <div class="col-sm-10">
+                            <input v-model="rcode" type="text" class="form-control" id="inputCode" placeholder="验证码">
+                         
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                        <input id="sendEmail" type="button" value="获取验证码" class="btn btn-default" onclick="sendIdentifyCode()" />
+                            <button type="submit" class="btn btn-default" onclick="regist()">注册</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+   
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+<script src="../resources/js/vue.js"></script>
+<script src="../resources/js/login.js"></script>
+</body>
+</html>

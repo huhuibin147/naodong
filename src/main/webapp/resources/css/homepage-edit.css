@@ -1,0 +1,85 @@
+.row{
+    margin: 0;
+}
+.fm-8{
+    height: 220px;
+    background-color: #9d9d9d;
+}
+.fm-2{
+    height: 220px;
+}
+.mid{
+    font-family: 微软雅黑;
+    box-shadow: 0 0 0.5px  #9d9d9d;
+    -moz-box-shadow: 0 0 0.5px  #9d9d9d;
+    -webkit-box-shadow: 0 0 0.5px  #9d9d9d;
+}
+.tou{
+    width: 168px;
+    height: 168px;
+    margin-left: 20px;
+    margin-top: -50px;
+    border-radius: 5px; /* 所有角都使用半径为5px的圆角，此属性为CSS3标准属性 */
+    -moz-border-radius: 5px; /* Mozilla浏览器的私有属性 */
+    -webkit-border-radius: 5px; /* Webkit浏览器的私有属性 */
+}
+.name{
+    margin-top: -85px;
+    margin-left: 230px;
+    font-size: 28px;
+}
+.home-button{
+    text-align: right;
+    margin-top: -30px;
+}
+.home-button a{
+    color: rgba(102, 102, 102, 0.71);
+    margin-right: 20px;
+}
+.sex{
+    margin-top: 30px;
+    margin-left: 230px;
+    font-size: 18px;
+}
+.interest{
+    margin-top: 30px;
+    margin-left: 230px;
+    font-size: 18px;
+}
+.birthday{
+    margin-top: 30px;
+    margin-left: 230px;
+    font-size: 18px;
+}
+.email{
+    margin-top: 50px;
+    margin-left: 230px;
+    font-size: 18px;
+}
+.intro{
+    margin-top: 30px;
+    margin-left: 230px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    min-height: 200px;
+}
+.edit{
+	text-align:center;
+	margin-top: 10px;
+    font-size: 18px;
+}
+.nickName{
+	margin-top: 30px;
+    margin-left: 230px;
+    font-size: 18px;
+}
+#editMode{
+	display: none;
+}
+.edit-data{
+	display: inline;
+	margin-left: 30px;
+}
+.editMode{
+	display: none;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@脑洞</title>
+
+    <link rel="stylesheet" href="../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../resources/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../resources/css/index.css">
+    <link rel="stylesheet" href="../resources/css/top.css">
+    <link rel="stylesheet" href="../resources/css/askQues.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/wangEditor.min.css">
+
+</head>
+<body>
+<script src="../resources/js/jquery-3.1.0.js"></script>
+<script src="../resources/js/bootstrap.js"></script>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">脑洞</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="theme.html">话题</a></li>
+                <li><a href="find.html">发现</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">消息 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search" onsubmit="return false">
+                <div class="form-group" id="mysearch">
+                    <input type="text" class="form-control" placeholder="Search" v-model="search">
+                </div>
+                <button  class="btn btn-default" onclick="search()">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right" id="usernav">
+                <li><a href="#">提问</a></li>
+                <li><img :src="img"  class="img-nav"></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{name}} <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="homepage.html">我的主页</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">私信</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">设置</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="row" id="QuesList">
+    <div class="col-md-2"> </div>
+    <div class="col-md-6 Home">
+        <div class="col-md-2">
+            <img :src="uimg" class="img-tou">
+        </div>
+        <div class="col-md-10 HomeEntry">
+           <ul class="HomeEntry-list">
+               <li><a href="#" data-toggle="modal" data-target="#myModal">提问</a></li>
+               <li><a href="#">回答</a></li>
+               <li><a href="article.html">写文章</a></li>
+           </ul>
+        </div>
+        <div class="col-md-12 article-list"  >
+            <div class="col-md-8 state">最新动态</div>
+            <div class="col-md-4 set"><a href="#">设置</a></div>
+            <hr align="left" width="630"  style="margin-top:40px">
+            
+           	
+			
+            <!-- 问题列表 -->
+            <div class="col-md-12 article" v-for="(todo,index) in todos" >
+                <div class="title">
+                    <div class="list-img">
+                        <img :src="imgs[index]"   class="list-tou">
+                    </div>
+                    <div class="list-right">
+                    <div class="topic">来自话题: <a href="#">{{themes[index]}}</a></div>
+                    <div class="titles"><a :href="'question.html?id='+todo.id">{{todo.title}}</a></div>
+                    </div><br>
+                </div>
+						<br>
+                <div class="content">
+                    <div class="zan" :id="'zan'+todo.id">
+                        {{todo.zan}}
+                    </div>
+                    <div class="user"><a href="#">{{names[index]}}</a> , 一个脑洞分享者</div>
+                    
+                    <div class="con" :id="'c-'+index" v-html="todo.content"></div>
+                    <div class="con-bot">
+                        <a class="chref" :onclick="'concern('+todo.id+')'">关注问题</a>&nbsp&nbsp
+                        <a href="#" >{{todo.anum}}条回答</a>&nbsp&nbsp
+                        <a class="ahref" :onclick="'agreeQues('+todo.id+','+todo.zan+','+index+')'">点赞</a>&nbsp&nbsp
+                        <a href="#">{{todo.time}}</a>
+                    </div>
+                </div>
+                <hr align="left" width="600" style="float: left">
+            </div>
+			<nav aria-label="...">
+			  <ul class="pager">
+			    <li><a href="#" onclick="pre()">Previous</a></li>
+			    <li><a href="#" onclick="next()">Next</a></li>
+			  </ul>
+			</nav>	
+        </div>
+
+
+    </div>
+    <div class="col-md-3">
+        <ul class="side-nav">
+            <li><a href="#">我的收藏</a></li>
+            <li><a href="#">我关注的问题</a></li>
+            <li><a href="#">邀请我回答的问题</a></li>
+            <hr align="left" width="200">
+            <li><a href="#">公共编辑状态</a></li>
+            <li><a href="#">社区服务中心</a></li>
+            <li><a href="#">版权服务中心</a></li>
+            <hr align="left" width="200">
+            <h4>脑洞专栏</h4>
+            <li><a href="#">专栏・发现</a></li>
+            <hr align="left" width="200">
+            <h4>脑洞LIVE</h4>
+            <li><a href="#">2017 年互联网职场预测</a></li>
+            <li><a href="#">2017 应届生面试技巧</a></li>
+            <li><a href="#">程序猿纸张</a></li>
+            <hr align="left" width="200">
+            <h4>知识圆桌</h4>
+            <li><a href="#">你现在读书吗</a></li>
+            <li><a href="#">2016 年度盘点</a></li>
+            <li><a href="#">程序猿纸张</a></li>
+            <hr align="left" width="200">
+            <h4>脑洞书店</h4>
+            <li><a href="#">《阿里面经》</a></li>
+            <li><a href="#">《如何沟通》</a></li>
+            <li><a href="#">《程序猿纸张》</a></li>
+        </ul>
+    </div>
+
+    <div class="col-md-1"> </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">提问</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control q-title" placeholder="写下你的问题">
+                <div class="q-c-t">问题说明(可选):</div>
+                <div id="q-content">
+					<p>请输入内容...</p>
+                </div>
+                <div class="topic-t">选择话题:</div>
+                <input type="text" class="form-control q-topic" placeholder="主题">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" onclick="push()">发布</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../resources/js/vue.js"></script>
+<script type="text/javascript" src="../resources/js/wangEditor.min.js"></script>
+<script type="text/javascript" src="../resources/js/index.js"></script>
+</body>
+</html>

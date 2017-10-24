@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+    <link rel="stylesheet" href="../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../resources/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../resources/css/topic.css">
+    <link rel="stylesheet" href="../resources/css/top.css">
+
+</head>
+<body>
+<script src="../resources/js/jquery-3.1.0.js"></script>
+<script src="../resources/js/bootstrap.js"></script>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">脑洞</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">首页</a></li>
+                <li class="active"><a href="theme.html">话题</a></li>
+                <li class=""><a href="find.html">发现</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">消息 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search" id="search" onsubmit="return false">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" v-model="topic">
+                </div>
+                <button type="submit" class="btn btn-default" onclick="encode()">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right" id="usernav">
+                <li><a href="#">提问</a></li>
+                <li><img :src="img"  class="img-nav"></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{name}} <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="homepage.html">我的主页</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">私信</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">设置</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="row">
+    <div class="col-md-2"> </div>
+    <div class="col-md-5">
+        
+        <div class="title" id="QuesList">
+        	<div class="topic-top">
+            <img src="../resources/image/zhuanlan2.jpg" class="tou">
+            <div class="title-t">{{topic}}</div>
+            <button type="button" class="btn btn-primary gz" onclick="concern()">关注</button></div>
+            <br><br><br>
+            <hr>
+            <div class="content"  v-for="(todo1,index) in lists">
+                <div class="content-title"><a :href="'question.html?id='+todo1.id">{{todo1.title}}</a></div>
+                <div class="a-num">{{todo1.zan}}</div>
+                <div class="user">{{todo1.name}} , 脑洞开发者</div><br><br>
+                <div class="content-c" :id="'c-'+index" v-html="todo1.content">
+                </div>
+                <div class="content-buttom">
+                    <a href="#">关注的问题</a>&nbsp
+                    <a href="#">{{todo1.anum}}条评论</a>&nbsp
+                    <a href="#">作者保留权</a>
+                </div>
+                <hr>
+            </div>
+
+           <nav aria-label="...">
+			  <ul class="pager">
+			    <li><a href="#" onclick="pre()">Previous</a></li>
+			    <li><a href="#" onclick="next()">Next</a></li>
+			  </ul>
+			</nav>
+            
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="topic-button">
+            <a href="topicsquare.html"><button type="button" class="btn btn-primary t-b" >进入话题广场</button></a>
+            <div class="t-ps">来这里发现更多有趣话题</div>
+        </div>
+        <div class="topic-list">
+            <div class="other-topic">其他人关注的话题</div>
+            <div class="change"><a href="#">换一换</a></div><br><br>
+            <div class="list">
+                <img src="../resources/image/topic.jpg" alt="..." class="list-tou">
+                <div class="t-item">自然科学</div>
+                <div class="t-gz"><a href="#">关注</a></div>
+                <br><br><br>
+                <img src="../resources/image/topic2.jpg" alt="..." class="list-tou">
+                <div class="t-item">教育</div>
+                <div class="t-gz"><a href="#">关注</a></div>
+                <br><br><br>
+                <img src="../resources/image/topic.jpg" alt="..." class="list-tou">
+                <div class="t-item">java</div>
+                <div class="t-gz"><a href="#">关注</a></div>
+                <br><br><br>
+                <img src="../resources/image/topic2.jpg" alt="..." class="list-tou">
+                <div class="t-item">c</div>
+                <div class="t-gz"><a href="#">关注</a></div><br><br><br>
+                <img src="../resources/image/topic.jpg" alt="..." class="list-tou">
+                <div class="t-item">python</div>
+                <div class="t-gz"><a href="#">关注</a></div>
+                <br><br><br>
+                <img src="../resources/image/topic2.jpg" alt="..." class="list-tou">
+                <div class="t-item">程序猿</div>
+                <div class="t-gz"><a href="#">关注</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"> </div>
+
+</div>
+
+<script src="../resources/js/vue.js"></script>
+<script type="text/javascript" src="../resources/js/topic.js"></script>
+</body>
+</html>

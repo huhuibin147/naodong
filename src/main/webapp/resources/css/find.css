@@ -1,0 +1,112 @@
+body{
+    background-color: #fff;
+    overflow: auto;
+}
+.row{
+    margin: 0;
+}
+.top{
+    margin-top: 20px;
+    font-family: 微软雅黑;
+}
+.top-left{
+    float: left;
+}
+.top-right a{
+    color: rgba(102, 102, 102, 0.71);
+    float: right;
+}
+.tou-1{
+    margin-top: 10px;
+    float: left;
+    height: 38px;
+    width: 38px;
+    border-radius: 3px; /* 所有角都使用半径为5px的圆角，此属性为CSS3标准属性 */
+    -moz-border-radius: 3px; /* Mozilla浏览器的私有属性 */
+    -webkit-border-radius: 3px; /* Webkit浏览器的私有属性 */
+}
+.name{
+
+    margin-top: 10px;
+    margin-left: 12px;
+    float: left;
+}
+.cont{
+    margin-top: 12px;
+    margin-left: 50px;
+}
+.content{
+    margin-top: 20px;
+}
+.nav-tabs{
+    margin-top: 20px;
+}
+.content-title a{
+    font-size: 18px;
+}
+.a-num{
+    margin-top: 5px;
+    text-align: center;
+    background-color: rgba(55, 118, 164, 0.37);
+    line-height: 25px;
+    color: #999999;
+    float: left;
+    width: 35px;
+    height: 25px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.user{
+    float: left;
+    margin-left: 7px;
+    margin-top: 7px;
+}
+.content-c{
+    margin-left: 40px;
+}
+.content-buttom{
+    margin-left: 40px;
+    margin-top: 5px;
+}
+.content-buttom a{
+    font-size: 12px;
+    color: rgba(102, 102, 102, 0.71);
+}
+.yz{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.yz-title{
+    float: left;
+}
+.yz-more a{
+    float: right;
+    font-size: 12px;
+    color: rgba(102, 102, 102, 0.71);
+}
+.yz-tou{
+    margin-top: 5px;
+    float: left;
+    height: 48px;
+    width: 48px;
+    border-radius: 3px; /* 所有角都使用半径为5px的圆角，此属性为CSS3标准属性 */
+    -moz-border-radius: 3px; /* Mozilla浏览器的私有属性 */
+    -webkit-border-radius: 3px; /* Webkit浏览器的私有属性 */
+}
+.yz-list-t{
+    margin-top: 5px;
+    float: left;
+    margin-left: 10px;
+}
+.yz-time{
+    color: rgba(102, 102, 102, 0.71);
+    margin-top: 5px;
+    float: right;
+}
+.yz-num{
+    margin-left: 10px;
+    margin-top: 7px;
+    float: left;
+    color: rgba(102, 102, 102, 0.71);
+}

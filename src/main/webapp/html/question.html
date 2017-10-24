@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../resources/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../resources/css/top.css">
+    <link rel="stylesheet" href="../resources/css/question.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/wangEditor.min.css">
+</head>
+<body>
+<script src="../resources/js/jquery-3.1.0.js"></script>
+<script src="../resources/js/bootstrap.js"></script>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">脑洞</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">首页</a></li>
+                <li><a href="theme.html">话题</a></li>
+                <li><a href="find.html">发现</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">消息 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right" id="usernav">
+                <li><a href="#">提问</a></li>
+                <li><img :src="img"  class="img-nav"></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{name}}  <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="homepage.html">我的主页</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">私信</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">设置</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-5 main" id="Ques">
+        <div class="type">
+            <a href="#">{{theme}}</a>
+        </div>
+        <h4><a href="#">{{todo.title}}</a></h4>
+        <P v-html="todo.content"></P>
+        <div class="q-buttom">
+            <a href="#">{{count}}个回答</a>
+            <a href="#">分享</a>
+            <a href="#">收藏</a>
+        </div>
+        <hr align="left" width="520">
+        <div class="all-q" id="answercount"><a href="#">全部{{count}}个回答</a></div>
+        <hr align="left" width="520">
+
+        <div class="answer" v-for="(answer,index) in answers">
+            <div class="col-md-1">
+                <img :src="imgs[index]"  class="list-tou">
+            </div>
+            <div class="a-name">
+                <div class="name">{{names[index]}}</div>
+                <div class="agree">{{answer.hit}}人赞同</div>
+            </div>
+            
+             <div class="content" v-html="answer.content">
+             
+            </div>
+            <div class="a-list">
+                <a href="#">编辑于{{answer.time}}</a>
+                <a href="#">点赞</a>
+                <a href="#">分享</a>
+                <a href="#">收藏</a>
+                <a href="#">作者保留权</a>
+            </div>
+            
+        <hr align="left" width="540">
+        </div>
+
+        
+        <nav aria-label="...">
+			  <ul class="pager">
+			    <li><a href="#answercount" onclick="pre()">Previous</a></li>
+			    <li><a href="#answercount" onclick="next()">Next</a></li>
+			  </ul>
+		</nav>
+        <div class="pinlun">
+	        <div id="a-content">
+				<p>请输入回答内容...</p>
+	        </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="push()">发布</button>
+        </div>
+        
+    </div>
+    <div class="col-md-3 gz">
+        <div class="gz-q">
+            <button type="button" class="btn btn-primary" onclick="concern()">关注问题</button>
+        </div>
+        <div class="gz-num">4人关注该问题</div>
+        <div class="gz-img">
+            <img src="../resources/image/list.jpg" alt="..." class="gz-tou">
+            <img src="../resources/image/zhuanlan2.jpg" alt="..." class="gz-tou">
+            <img src="../resources/image/zhuanlan.jpg" alt="..." class="gz-tou">
+            <img src="../resources/image/tou3.jpg" alt="..." class="gz-tou">
+            
+           
+        </div>
+        <div class="live">
+            <div class="title">相关Live推荐</div>
+            <div class="list">
+                <div class="list-item">
+                <img src="../resources/image/zhuanlan2.jpg" alt="..." class="live-tou">
+                <a href="#">程序猿的常见陋习</a>
+                </div>
+                <div class="list-item">
+                <img src="../resources/image/zhuanlan.jpg" alt="..." class="live-tou">
+                <a href="#">程序猿的如何写好一篇文章</a></div>
+                    <div class="list-item">
+                <img src="../resources/image/list.jpg" alt="..." class="live-tou">
+                <a href="#">如何快速攻克传统算法和数据结构</a></div>
+            </div>
+            <hr align="left" width="300">
+            <div class="state">
+                <div class="q-state">问题状态</div>
+                <div class="q-content">
+                <div class="q-con">最近活动于 昨天 17:27 • 查看问题日志</div>
+                <div class="q-con"> 被浏览 16 次，相关话题关注者 5 人</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+
+<script type="text/javascript" src="../resources/js/wangEditor.min.js"></script>
+<script src="../resources/js/vue.js"></script>
+<script src="../resources/js/question.js"></script>
+</div>
+
+</body>
+</html>

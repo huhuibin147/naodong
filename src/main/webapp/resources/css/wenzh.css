@@ -1,0 +1,31 @@
+body{
+    background-color: #fff;
+    overflow: auto;
+}
+.row{
+    margin: 0;
+    margin-bottom: 50px;
+}
+.title{
+	font-size: 30px;
+}
+.user{
+	margin-top: 20px;
+	
+}
+.tou{
+	float:left;
+	margin-top: 5px;
+    height: 38px;
+    width: 38px;
+    border-radius: 20px; /* 所有角都使用半径为5px的圆角，此属性为CSS3标准属性 */
+    -moz-border-radius: 20px; /* Mozilla浏览器的私有属性 */
+    -webkit-border-radius: 20px; /* Webkit浏览器的私有属性 */
+}
+.name{
+	float: left;
+	font-size: 18px;
+	color:#9d9d9d;
+	margin-top: 8px;
+	margin-left: 10px;
+}

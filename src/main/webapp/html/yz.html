@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../resources/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../resources/css/yz.css">
+    <link rel="stylesheet" href="../resources/css/top.css">
+</head>
+<body>
+<script src="../resources/js/jquery-3.1.0.js"></script>
+<script src="../resources/js/bootstrap.js"></script>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">脑洞</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="theme.html">话题</a></li>
+                <li><a href="find.html">发现</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">消息 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right" id="usernav">
+                <li><a href="#">提问</a></li>
+                <li><img :src="img"  class="img-nav"></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{name}}  <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="homepage.html">我的主页</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">私信</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">设置</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="row">
+    <div class="col-md-1"> </div>
+    <div class="col-md-7">
+        
+		<div class="list">
+            <div class="yz">
+                <a href="chat.html?roomid=7"><img src="../resources/image/yz4.jpg" class="list-tou"></a>
+                <div class="yz-title">人工智能</div>
+                <div class="yz-num"><p>「深度学习」算法的发展</p></div>
+            </div>
+            <div class="yz">
+                <a href="chat.html?roomid=8"><img src="../resources/image/yz5.jpg" class="list-tou"></a>
+                <div class="yz-title">创意者经济</div>
+                <div class="yz-num"><p>文化经济产业「模式」</p></div>
+            </div>
+            <div class="yz">
+                <a href="chat.html?roomid=9"><img src="../resources/image/yz6.jpg" class="list-tou"></a>
+                <div class="yz-title">日常经济学</div>
+                <div class="yz-num"><p>「博弈」都是一个高频词汇</p></div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="yz">
+                <a href="chat.html?roomid=1"><img src="../resources/image/yz01.jpg" class="list-tou"></a>
+                <div class="yz-title">新能源汽车时代</div>
+                <div class="yz-num"><p>什么才是「新能源汽车」</p></div>
+            </div>
+            <div class="yz">
+                <a href="chat.html?roomid=2"><img src="../resources/image/yz02.jpg" class="list-tou"></a>
+                <div class="yz-title">买辆二手车</div>
+                <div class="yz-num"><p>购买一辆「二手车」</p></div>
+            </div>
+            <div class="yz">
+                <a href="chat.html?roomid=3"><img src="../resources/image/yz03.jpg" class="list-tou"></a>
+                <div class="yz-title">你现在还读书吗</div>
+                <div class="yz-num"><p>对「阅读」这件事的理解</p></div>
+            </div>
+        </div>
+        <!-- 复制 -->
+        <div class="list">
+            <div class="yz">
+                <a href="chat.html?roomid=4"><img src="../resources/image/yz7.jpg" class="list-tou"></a>
+                <div class="yz-title">闲话葡萄酒</div>
+                <div class="yz-num"><p>对「葡萄酒」的认知</p></div>
+            </div>
+            <div class="yz">
+                <a href="chat.html?roomid=5"><img src="../resources/image/yz8.jpg" class="list-tou"></a>
+                <div class="yz-title">看球 · NBA 总决赛</div>
+                <div class="yz-num"><p>克里夫兰骑「首冠」</p></div>
+            </div>
+            <div class="yz">
+                <a href="chat.html?roomid=6"><img src="../resources/image/yz9.jpg" class="list-tou"></a>
+                <div class="yz-title">网瘾与网络生活</div>
+                <div class="yz-num"><p>我们该如何理解「网瘾」</p></div>
+            </div>
+        </div>
+        <!-- 复制 -->
+        
+    </div>
+    <div class="col-md-3">
+        <div class="item">
+            <div class="item-title"><b>主办方</b></div>
+            <hr>
+            <div class="item1">
+                <a href="#"><img src="../resources/image/yz-zbf.jpg" class="item1-tou"></a>
+                <div class="item1-t">知识圆桌</div><br>
+                <div class="item1-c">举办过 4 场圆桌</div><br>
+            </div>
+            <hr>
+            <!--复制 -->
+            <div class="item1">
+                <a href="#"><img src="../resources/image/yz-zbf3.jpg" class="item1-tou"></a>
+                <div class="item1-t">DJI 大疆创新</div><br>
+                <div class="item1-c">举办过 1 场圆桌</div><br>
+            </div>
+            <hr>
+            <!--复制 -->
+            <div class="item1">
+                <a href="#"><img src="../resources/image/yz-zbf2.jpg" class="item1-tou"></a>
+                <div class="item1-t">刘看山城市冰屋</div><br>
+                <div class="item1-c">举办过 1 场圆桌</div><br>
+            </div>
+            <hr>
+            <!--复制 -->
+            <div class="item1">
+                <a href="#"><img src="../resources/image/yz-zbf4.jpg" class="item1-tou"></a>
+                <div class="item1-t">腾讯体育</div><br>
+                <div class="item1-c">举办过 1 场圆桌</div><br>
+            </div> <hr>
+            <!--复制 -->
+            <div class="item1">
+                <a href="#"><img src="../resources/image/yz-zbf5.jpg" class="item1-tou"></a>
+                <div class="item1-t">以太资本</div><br>
+                <div class="item1-c">举办过 1 场圆桌</div><br>
+            </div>
+            <hr>
+            <!--复制 -->
+            <div class="item1">
+                <a href="#"><img src="../resources/image/yz-zbf6.jpg" class="item1-tou"></a>
+                <div class="item1-t">哔哩哔哩</div><br>
+                <div class="item1-c">举办过 1 场圆桌</div><br>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1"> </div>
+
+<script src="../resources/js/vue.js"></script>
+<script src="../resources/js/yz.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../resources/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../resources/css/find.css">
+    <link rel="stylesheet" href="../resources/css/top.css">
+</head>
+<body>
+
+<script src="../resources/js/jquery-3.1.0.js"></script>
+<script src="../resources/js/bootstrap.js"></script>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">脑洞</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">首页</a></li>
+                <li class=""><a href="theme.html">话题</a></li>
+                <li class="active"><a href="#">发现</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">消息 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+             <ul class="nav navbar-nav navbar-right" id="usernav">
+                <li><a href="#">提问</a></li>
+                <li><img :src="img"  class="img-nav"></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{name}} <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="homepage.html">我的主页</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">私信</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">设置</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="row">
+    <div class="col-md-2"> </div>
+    <div class="col-md-5">
+        <div class="top">
+            <div class="top-left">编辑推荐</div>
+            <div class="top-right"><a href="#">更多推荐&gt</a></div>
+        </div>
+        <br>
+        <hr>
+        <div class="list">
+            
+            <div class="content-1" id="ArtList">
+                <!-- 
+                <div class="title-1"><a href="#">二级市场私募基金的基金经理助理有哪些职业发展方向？需要什么样的背景和技能？</a></div>
+                <img src="../resources/image/topic.jpg" alt="" class="tou-1">
+                <div class="name"><b>Johnnie Drinker</b></div><br>
+                <div class="cont">
+                    正在二级私募搬砖的基金经理助理来说一下，我本人没啥软实力，也带不来什么募资渠道，
+                    但是目前还能覆盖需要做的工作，暂时觉得自己还蛮适合这个岗位。不过我们刚起步，所
+                    以事务相对杂一些，如果大型一些的资管着重点可能会不太一样。 首先说一下基金经理助…</div>
+                <hr> -->
+                <div  v-for="a in list">
+                <div class="title-1"><a :href="'wenzh.html?id='+a.id">{{a.title}}</a></div> <hr>
+                </div>
+               <nav aria-label="...">
+			  <ul class="pager">
+			    <li><a href="#" onclick="pre()">Previous</a></li>
+			    <li><a href="#" onclick="next()">Next</a></li>
+			  </ul>
+			</nav>
+                
+                <ul id="myTab" class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#hot-day" data-toggle="tab">今日最热</a>
+                    </li>
+                    <li>
+                        <a href="#hot-month" data-toggle="tab">今月最热</a>
+                    </li>
+                </ul>
+                <div id="myTabContent1" class="tab-content">
+                    <div class="tab-pane fade in active" id="hot-day">
+                        <form class="form-horizontal" role="form" onsubmit="return false" id="login-form">
+                            <div class="content" v-for="(l,index) in lists">
+                                <div class="content-title"><a :href="'wenzh.html?id='+l.id">{{l.title}}</a></div>
+                                <div class="a-num">{{l.zan}}</div>
+                                <div class="user">{{l.name}} , 脑洞开发者</div><br><br>
+                                <div class="content-c" :id="'c-'+index" v-html="l.content">
+                                </div>
+                                <div class="content-buttom">
+                                    <a href="#">关注的问题</a>&nbsp
+                                    <a href="#">20条评论</a>&nbsp
+                                    <a href="#">作者保留权</a>
+                                </div>
+                                <hr>
+                            </div>
+
+                            
+                            
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="hot-month">
+                        <form class="form-horizontal" role="form">
+                            <!-- 复制-->
+                            <div class="content">
+                                <div class="content-title"><a href="#">微信小程序和网页版程序的区别在哪里？</a></div>
+                                <div class="a-num">265</div>
+                                <div class="user">hb , 脑洞开发者</div><br><br>
+                                <div class="content-c">之前想整理了自己的日用工具成一本电子书，但是好像没有整完。 这里就只放个目录，详细的内容见GitHub: GitHub - phodal/toolbox: Phodal's Toolbox 文档篇PandocGraphvizImageMagickTeX 和 LatexJupyter NotebookGitbook图形工具篇流程图：Graphviz流程图… 显示全部
+                                </div>
+                                <div class="content-buttom">
+                                    <a href="#">关注的问题</a>&nbsp
+                                    <a href="#">20条评论</a>&nbsp
+                                    <a href="#">作者保留权</a>
+                                </div>
+                                <hr>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="yz">
+            <div class="yz-title">热门圆桌</div>
+            <div class="yz-more"><a href="yz.html">更多圆桌&gt</a></div><br><br>
+            <img src="../resources/image/yz5.jpg" alt="" class="yz-tou">
+            <div class="yz-list-t"><a href="chat.html?roomid=8">创意者经济</a> </div>
+            <div class="yz-time">还有 4 天结束</div>
+            <div class="yz-num">文化经济产业「模式」</div>
+            <br><br><br><hr>
+            <img src="../resources/image/yz03.jpg" alt="" class="yz-tou">
+            <div class="yz-list-t"><a href="chat.html?roomid=3">你现在还读书吗</a> </div>
+            <div class="yz-time">还有 6 天结束</div>
+            <div class="yz-num">对「阅读」这件事的理解</div>
+            <br><br><br><hr>
+            <img src="../resources/image/yz8.jpg" alt="" class="yz-tou">
+            <div class="yz-list-t"><a href="chat.html?roomid=5">看球 · NBA 总决赛</a> </div>
+            <div class="yz-time">还有 2 天结束</div>
+            <div class="yz-num">克里夫兰骑「首冠」</div>
+            <br><br><br><hr>
+            <img src="../resources/image/yz6.jpg" alt="" class="yz-tou">
+            <div class="yz-list-t"><a href="chat.html?roomid=9">日常经济学</a> </div>
+             <div class="yz-time">还有 3 天结束</div>
+            <div class="yz-num">「博弈」都是一个高频词汇</div>
+            <br><br><br><hr>
+        </div>
+    </div>
+    <div class="col-md-2"> </div>
+<script src="../resources/js/vue.js"></script>
+<script type="text/javascript" src="../resources/js/find.js"></script>
+</body>
+</html>

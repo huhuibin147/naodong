@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+
+<link rel="stylesheet" href="../resources/css/bootstrap.css">
+<link rel="stylesheet" href="../resources/css/bootstrap-theme.css">
+<link rel="stylesheet" href="../resources/css/top.css">
+<link rel="stylesheet" href="../resources/css/homepage-edit.css">
+</head>
+<body>
+	<script src="../resources/js/jquery-3.1.0.js"></script>
+	<script src="../resources/js/bootstrap.js"></script>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header ">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">脑洞</a>
+			</div>
+
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="theme.html">话题</a></li>
+					<li><a href="find.html">发现</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">消息 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="homepage.html">私人动态</a></li>
+						</ul></li>
+				</ul>
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">搜索</button>
+				</form>
+				<ul class="nav navbar-nav navbar-right" id="navbar">
+					<li><a href="#">提问</a></li>
+					<li><img :src="userInfo.userimg" alt="..."
+						class="img-nav"></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">{{userInfo.realname}}<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="homepage.html">我的主页</a></li>
+							<li class="divider"></li>
+							<li><a href="homepage-edit.html">设置</a></li>
+							<li class="divider"></li>
+							<li><a href="#" onclick="logOut();">退出</a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="row" id="infoPanel">
+		<div class="col-md-2"></div>
+		<div class="col-md-8 fm-8"></div>
+		<div class="col-md-2 fm-2"></div>
+
+		<div class="col-md-2"></div>
+		<div class="col-md-8 mid">
+			<img :src="userInfo.img" alt="..." class="tou">
+			<div class="name">{{userInfo.realname}}</div>
+			<div class="home-button">
+				<a href="homepage.html">返回我的主页 &gt</a>
+			</div>
+			<div class="email">
+				邮箱
+				<div class="edit-data" style="margin-left: 65px;">{{userInfo.username}}</div>
+			</div>
+			<hr width="55%">
+			<div class="nickName readMode">
+				昵称
+				<div class="edit-data" style="margin-left: 65px;">{{userInfo.realname}}</div>
+			</div>
+			<div class="nickName editMode">
+				<span>昵称</span>
+				<div class="edit-data" style="margin-left: 65px;">
+					<input id="nickname" type="text" :value="userInfo.realname" />
+				</div>
+			</div>
+			<hr width="55%">
+			<div class="sex readMode">
+				性别
+				<div class="edit-data" style="margin-left: 65px;">{{userInfo.sex}}</div>
+			</div>
+			<div class="sex editMode">
+				性别
+				<div class="edit-data" style="margin-left: 65px;">
+					<input id="male" type="radio" name="sex" value="男" />男&nbsp&nbsp&nbsp&nbsp
+					<input id="female" type="radio" name="sex" value="女" />女
+				</div>
+			</div>
+			<hr width="55%">
+			<div class="birthday readMode">
+				出生日期
+				<div class="edit-data">{{userInfo.birthday}}</div>
+			</div>
+			<div class="birthday editMode">
+				出生日期
+				<div class="edit-data">
+					<input id="birthday" type="date" :value="userInfo.birthday" />
+				</div>
+			</div>
+			<hr width="55%">
+			<div class="interest readMode">
+				兴趣爱好
+				<div class="edit-data">{{userInfo.interest}}</div>
+			</div>
+			<div class="interest editMode">
+				<span>兴趣爱好</span>
+				<div class="edit-data">
+					<input id="interest" type="text" :value="userInfo.interest" />
+				</div>
+			</div>
+			<hr width="55%">
+			<div class="interest editMode">
+				<span>密码</span> <a href="#readMode" style="margin-left: 65px;"
+					v-on:click="edit" alt="进入编辑模式" data-toggle="modal"
+					data-target=".bs-example-modal-sm"> <img alt="不再关注此消息"
+					src="../resources/image/edit.png"> 修改密码
+				</a>
+			</div>
+			<hr width="55%" class="editMode">
+			<div class="intro readMode">
+				个人简介
+				<div class="edit-data">{{userInfo.intro}}</div>
+			</div>
+			<div class="intro editMode">
+				<span>个人简介</span>
+				<div class="edit-data">
+					<textarea id="introduce" rows="3" cols="50"></textarea>
+				</div>
+			</div>
+			<div class="edit">
+				<a id="readMode" href="#readMode" v-on:click="edit" alt="进入编辑模式">
+					<img alt="不再关注此消息" src="../resources/image/edit.png"> 编辑
+				</a> <a id="editMode" href="#editMode" v-on:click="save" alt="保存个人信息">
+					<img alt="不再关注此消息" src="../resources/image/save.png"> 保存
+				</a>
+			</div>
+		</div>
+
+	</div>
+	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"
+		aria-labelledby="mySmallModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel"
+						style="font-weight: bold;">修改密码</h4>
+				</div>
+				<form action="">
+					<div class="modal-body">
+						<div style="margin-top: 10px; text-align: center;">
+							原密码 <input id="oldPwd" type="password" required="required"
+								style="margin-left: 30px;">
+						</div>
+						<div style="margin-top: 10px; text-align: center;">
+							新密码 <input id="newPwd" type="password" required="required"
+								style="margin-left: 30px;">
+						</div>
+						<div style="margin-top: 10px; text-align: center;">
+							确认新密码 <input id="confirmPwd" type="password" required="required"
+								style="margin-left: 5px;">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal"
+							onclick="checkPwd()">保存</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="../resources/js/vue.js"></script>
+	<script type="text/javascript" src="../resources/js/md5.js"></script>
+	<script type="text/javascript" src="../resources/js/homepage-edit.js"></script>
+</body>
+</html>

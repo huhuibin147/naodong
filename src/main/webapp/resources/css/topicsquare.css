@@ -1,0 +1,105 @@
+body{
+    background-color: #fff;
+    overflow: auto;
+}
+.row{
+    margin: 0;
+}
+.top{
+    margin-top: 10px;
+}
+.top-left{
+    font-family: 微软雅黑;
+    font-size: 16px;
+    float: left;
+}
+.topic-num{
+    color: rgba(102, 102, 102, 0.71);
+    float: right;
+}
+.type{
+
+}
+.type a{
+    background-color: rgba(88, 156, 164, 0.34);
+    padding: 5px;
+    font-size: 12px;
+    margin-left: 10px;
+    border-radius: 10px; /* 所有角都使用半径为5px的圆角，此属性为CSS3标准属性 */
+    -moz-border-radius: 10px; /* Mozilla浏览器的私有属性 */
+    -webkit-border-radius: 10px; /* Webkit浏览器的私有属性 */
+}
+
+
+.topic-list{
+    font-family: 微软雅黑;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.other-topic{
+    font-size: 16px;
+    float: left;
+}
+.change{
+    float: right;
+}
+.list-tou{
+    float: left;
+    width: 38px;
+    height: 38px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.t-item{
+    font-size: 16px;
+    float: left;
+    margin-top: 7px;
+    margin-left: 13px;
+}
+.t-gz a{
+    margin-top: 8px;
+    float: right;
+}
+.topic-button{
+    margin-left: 20px;
+    background-color: #cce1ef;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+.t-b{
+    margin-top: 50px;
+    margin-left: 35%;
+}
+.t-ps{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.s-tou{
+    float: left;
+    width: 48px;
+    height: 48px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.s-topic{
+	margin-top: 20px;
+}
+.s-title{
+    font-size: 18px;
+    margin-left: 15px;
+	margin-top: 10px;
+    float: left;
+}
+.s-gz{
+	float: right;
+	margin-top: 8px;
+}
+.type a{
+	cursor: pointer;
+}

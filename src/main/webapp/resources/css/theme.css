@@ -1,0 +1,134 @@
+body{
+    background-color: #fff;
+    overflow: auto;
+}
+.row{
+    margin: 0;
+}
+.top{
+    margin-top: 10px;
+}
+.top-left{
+    font-family: 微软雅黑;
+    font-size: 16px;
+    float: left;
+}
+.topic-num{
+    color: rgba(102, 102, 102, 0.71);
+    float: right;
+}
+.type{
+
+}
+.type a{
+    background-color: rgba(88, 156, 164, 0.34);
+    padding: 5px;
+    font-size: 12px;
+    margin-left: 10px;
+    border-radius: 10px; /* 所有角都使用半径为5px的圆角，此属性为CSS3标准属性 */
+    -moz-border-radius: 10px; /* Mozilla浏览器的私有属性 */
+    -webkit-border-radius: 10px; /* Webkit浏览器的私有属性 */
+}
+.tou{
+    float: left;
+    width: 48px;
+    height: 48px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.title-t{
+    font-size: 16px;
+    margin-top: 13px;
+    margin-left: 15px;
+    float: left;
+}
+.sort{
+    float: right;
+    margin-top: 13px;
+}
+.c-t{
+    margin-top: 70px;
+}
+.content-title a{
+    font-size: 18px;
+}
+.a-num{
+    margin-top: 5px;
+    text-align: center;
+    background-color: rgba(55, 118, 164, 0.37);
+    line-height: 25px;
+    color: #999999;
+    float: left;
+    width: 35px;
+    height: 25px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.user{
+    float: left;
+    margin-left: 7px;
+    margin-top: 7px;
+}
+.content-c{
+    margin-left: 40px;
+}
+.content-buttom{
+    margin-left: 40px;
+    margin-top: 5px;
+}
+.content-buttom a{
+    font-size: 12px;
+    color: rgba(102, 102, 102, 0.71);
+}
+.topic-list{
+    font-family: 微软雅黑;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.other-topic{
+    font-size: 16px;
+    float: left;
+}
+.change{
+    float: right;
+}
+.list-tou{
+    float: left;
+    width: 38px;
+    height: 38px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.t-item{
+    font-size: 16px;
+    float: left;
+    margin-top: 7px;
+    margin-left: 13px;
+}
+.t-gz a{
+    margin-top: 8px;
+    float: right;
+}
+.topic-button{
+    margin-left: 20px;
+    background-color: #cce1ef;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+.t-b{
+    margin-top: 50px;
+    margin-left: 30%;
+}
+.t-ps{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.type a{
+	cursor: pointer;
+}

@@ -1,0 +1,22 @@
+body{
+    background-color: #fff;
+}
+.row{
+    margin: 0;
+}
+.title h1{
+    text-align: center;
+    color: #b92c28;
+    font-size: 5em;
+    margin-top:50px;
+}
+.title h2{
+    text-align: center;
+    margin-top:30px;
+}
+.title #myTab{
+    margin-top:40px;
+}
+.title form{
+    margin-top:30px;
+}

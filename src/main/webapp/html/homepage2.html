@@ -1,0 +1,250 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+
+<link rel="stylesheet" href="../resources/css/bootstrap.css">
+<link rel="stylesheet" href="../resources/css/bootstrap-theme.css">
+<link rel="stylesheet" href="../resources/css/top.css">
+<link rel="stylesheet" href="../resources/css/homepage.css">
+
+</head>
+<body>
+	<script src="../resources/js/jquery-3.1.0.js"></script>
+	<script src="../resources/js/bootstrap.js"></script>
+	<nav class="navbar navbar-default myNavBar" role="navigation" >
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header ">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#" style="color:white !important;font-size: 20px;">脑洞</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html" style="color:white !important;font-size: 17px;">首页</a></li>
+					<li><a href="theme.html" style="color:white !important;font-size: 17px;">话题</a></li>
+					<li><a href="find.html" style="color:white !important;font-size: 17px;">发现</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" style="color:white !important;font-size: 17px;"
+						data-toggle="dropdown">消息 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+							<li class="divider"></li>
+							<li><a href="#">One more separated link</a></li>
+						</ul></li>
+				</ul>
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">搜索</button>
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#" style="color:white !important;font-size: 14px;">提问</a></li>
+					<li><img src="../resources/image/tou3.jpg" alt="..."
+						class="img-nav"></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" style="color:white !important;font-size: 16px;">hb <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">我的主页</a></li>
+							<li class="divider"></li>
+							<li><a href="#">私信</a></li>
+							<li class="divider"></li>
+							<li><a href="#">设置</a></li>
+							<li class="divider"></li>
+							<li><a href="#">退出</a></li>
+						</ul></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<div class="row">
+		<div class="home-top">
+			<div class="col-md-2"></div>
+			<div class="col-md-8 fm-8" style="background-color: rgb(129,192,214);"></div>
+			<div class="col-md-2 fm-2"></div>
+
+			<div class="col-md-2"></div>
+			<div class="col-md-8 edit-8">
+				<img src="../resources/image/tou3.jpg" alt="..." class="tou">
+				<div class="name">胡辉滨</div>
+				<div class="set" style="background-color: rgb(129,146,214);opacity: 0.9">
+					<a href="homepage-edit.html" style="color:white;!important">编辑个人资料</a>
+				</div>
+			</div>
+			<div class="col-md-2 edit-2"></div>
+		</div>
+
+		<div class="home-mid">
+			<div class="col-md-2"></div>
+			<div class="col-md-6 mid-6" id="tab" style="padding-bottom: 10px;">
+				<div>
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs tabNav" role="tablist">
+						<li role="" class="active tabTitle tabTitleText">
+							<a href="#dtPanel"
+							aria-controls="dtPanel" role="tab" data-toggle="tab">动态</a>
+						</li>
+						<li role="presentation" class="tabTitle tabTitleText">
+							<a href="#questionPanel"
+							aria-controls="questionPanel" role="tab" data-toggle="tab">提问</a>
+						</li>
+						<li role="presentation" class="tabTitle tabTitleText">
+							<a href="#answerPanel"
+							aria-controls="answerPanel" role="tab" data-toggle="tab">回答</a>
+						</li>
+						<li role="presentation" class="tabTitle tabTitleText">
+							<a href="#articlePanel"
+							aria-controls="articlePanel" role="tab" data-toggle="tab">文章</a>
+						</li>
+						<li role="presentation" class="tabTitle tabTitleText">
+							<a href="#sharePanel"
+							aria-controls="sharePanel" role="tab" data-toggle="tab">分享</a>
+						</li>
+						<li role="presentation" class="tabTitle tabTitleText">
+							<a href="#concernPanel"
+							aria-controls="concernPanel" role="tab" data-toggle="tab">关注</a>
+						</li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content tabContent">
+						<div role="tabpanel" class="tab-pane active" id="dtPanel">
+							<div class="contentTop">&nbsp&nbsp我的动态</div>
+							<div style="height: 130px;" v-for="item in items">
+								<hr align="center" style="margin-top: 0px;">
+								<div class="content">
+									<div class="col-md-2 guanzhu">关注了话题</div>
+									<div class="col-md-8"></div>
+									<div class="col-md-2 time">{{item.concernDate}}</div>
+									<div class="col-md-2 z-tou">
+										<img src="../resources/image/zhuanlan2.jpg" alt="..."
+											class="z-t" />
+									</div>
+									<div class="col-md-10 z-title">{{item.title}}</div>
+									<div>{{item.content}}</div>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="questionPanel">
+							<div class="contentTop">&nbsp&nbsp我的提问</div>
+							<div style="height: 150px;" v-for="item in items">
+								<hr align="center" style="margin-top: 0px;">
+								<div class="content">
+									<div class="col-md-2 guanzhu">开启了脑洞</div>
+									<div class="col-md-8"></div>
+									<div class="col-md-2 time">{{item.time}}</div>
+									<div class="col-md-2 z-tou">
+										<img src="../resources/image/zhuanlan2.jpg" alt="..."
+											class="z-t" />
+									</div>
+									<div class="col-md-10 z-title">{{item.title}}</div>
+									<div>{{item.content}}</div>
+								</div>
+							</div>						
+						</div>
+						<div role="tabpanel" class="tab-pane" id="articlePanel">
+							<div class="contentTop">&nbsp&nbsp我的文章</div>
+							<div style="height: 150px;" v-for="item in items">
+								<hr align="center" style="margin-top: 0px;">
+								<div class="content">
+									<div class="col-md-2 guanzhu">加入了脑洞</div>
+									<div class="col-md-8"></div>
+									<div class="col-md-2 time">{{item.time}}</div>
+									<div class="col-md-2 z-tou">
+										<img src="../resources/image/zhuanlan2.jpg" alt="..."
+											class="z-t" />
+									</div>
+									<div class="col-md-10 z-title">{{item.title}}</div>
+									<div>{{item.content}}</div>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="sharePanel">
+							<div class="contentTop">&nbsp&nbsp我的分享</div>
+							<div style="height: 150px;" v-for="item in items">
+								<hr align="center" style="margin-top: 0px;">
+								<div class="content">
+									<div class="col-md-2 guanzhu">分享了内容</div>
+									<div class="col-md-8"></div>
+									<div class="col-md-2 time">{{item.concernDate}}</div>
+									<div class="col-md-2 z-tou">
+										<img src="../resources/image/zhuanlan2.jpg" alt="..."
+											class="z-t" />
+									</div>
+									<div class="col-md-10 z-title">{{item.title}}</div>
+									<div>{{item.content}}</div>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="answerPanel">
+							<div class="contentTop">&nbsp&nbsp我的回答</div>
+							<div style="height: 150px;" v-for="item in items">
+								<hr align="center" style="margin-top: 0px;">
+								<div class="content">
+									<div class="col-md-2 guanzhu">加入了脑洞</div>
+									<div class="col-md-8"></div>
+									<div class="col-md-2 time">{{item.time}}</div>
+									<div class="col-md-2 z-tou">
+										<img src="../resources/image/zhuanlan2.jpg" alt="..."
+											class="z-t" />
+									</div>
+									<div class="col-md-10 z-title">{{item.title}}</div>
+									<div>{{item.content}}</div>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="concernPanel">...</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="col-md-2 ce-list" >
+				<div class="">
+					<ul class="list-entry">
+						<li><a href="#">关注了</a></li>
+						<li><a href="#">关注者</a></li>
+					</ul>
+				</div>
+				<div class="list-num">
+					<ul class="list-entry">
+						<li>66</a></li>
+						<li>99</a></li>
+					</ul>
+				</div>
+				<div style="margin-top: 100px"></div>
+				<div class="list-gz">
+					<div class="l-z1">关注的话题</div>
+					<div class="l-z2">6</div>
+					<div class="l-z1">关注的专栏</div>
+					<div class="l-z2">7</div>
+					<div class="l-z1">关注的问题</div>
+					<div class="l-z2">2</div>
+					<div class="l-z1">关注的收藏夹</div>
+					<div class="l-z2">5</div>
+				</div>
+				<div class="times">个人主页被浏览49次</div>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+	<script src="../resources/js/vue.js"></script>
+	<script type="text/javascript" src="../resources/js/homepage.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+.row{
+    margin: 0;
+}
+.main{
+    margin-top: 5px;
+}
+.q-buttom a{
+    font-size: 10px;
+    color: rgba(102, 102, 102, 0.71);
+}
+.all-q{
+    font-size: 12px;
+}
+.list-tou{
+    height: 38px;
+    width: 38px;
+}
+.name{
+    margin-left: 70px;
+}
+.agree{
+    margin-left: 70px;
+    margin-top: 5px;
+    color: rgba(102, 102, 102, 0.71);
+    font-size: 12px;
+}
+.content{
+    margin-left: 70px;
+    margin-top: 5px;
+}
+.a-list{
+    margin-left: 65px;
+}
+.a-list a{
+    margin-left: 5px;
+    font-size: 10px;
+    color: rgba(102, 102, 102, 0.71);
+}
+.type{
+    margin-bottom: 20px;
+}
+.type a{
+    background-color: rgba(88, 156, 164, 0.34);
+    padding: 5px;
+    font-size: 12px;
+    margin-left: 5px;
+    border-radius: 10px; /* 所有角都使用半径为5px的圆角，此属性为CSS3标准属性 */
+    -moz-border-radius: 10px; /* Mozilla浏览器的私有属性 */
+    -webkit-border-radius: 10px; /* Webkit浏览器的私有属性 */
+}
+.gz{
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.gz-num{
+    margin-top: 30px;
+    color: rgba(102, 102, 102, 0.71);
+}
+.gz-img{
+    margin-top: 15px;
+}
+.gz-tou{
+    margin-top: 5px;
+    height: 25px;
+    width: 25px;
+    box-shadow: 0 0 0.5px  #9d9d9d;
+    -moz-box-shadow: 0 0 0.5px  #9d9d9d;
+    -webkit-box-shadow: 0 0 0.5px  #9d9d9d;
+    border-radius: 3px; /* 所有角都使用半径为5px的圆角，此属性为CSS3标准属性 */
+    -moz-border-radius: 3px; /* Mozilla浏览器的私有属性 */
+    -webkit-border-radius: 3px; /* Webkit浏览器的私有属性 */
+}
+.live{
+    margin-top: 50px;
+}
+.title{
+    font-size: 17px;
+    font-weight: bold;
+}
+.list{
+    margin-top: 10px;
+}
+.live-tou{
+    margin-top: 5px;
+    height: 25px;
+    width: 25px;
+    box-shadow: 0 0 0.5px  #9d9d9d;
+    -moz-box-shadow: 0 0 0.5px  #9d9d9d;
+    -webkit-box-shadow: 0 0 0.5px  #9d9d9d;
+    border-radius: 5px; /* 所有角都使用半径为5px的圆角，此属性为CSS3标准属性 */
+    -moz-border-radius: 5px; /* Mozilla浏览器的私有属性 */
+    -webkit-border-radius: 5px; /* Webkit浏览器的私有属性 */
+}
+.list-item{
+    margin-top: 5px;
+}
+.live a{
+    color: black;
+    margin-left: 5px;
+    font-size: 13px;
+}
+.q-state{
+    font-size: 17px;
+    font-weight: bold;
+}
+.q-content{
+    margin-top: 20px;
+}
+.q-con{
+    margin-top: 5px;
+    font-size: 13px;
+    color: rgba(102, 102, 102, 0.71);
+}
+.a-user{
+	margin-bottom: 10px;
+	color: gray;
+}
+.pinlun{
+	margin-left: 60px;
+}
+.modal-footer{
+	margin-bottom: 50px;
+}
+
